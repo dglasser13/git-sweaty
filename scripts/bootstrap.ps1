@@ -151,6 +151,11 @@ function Invoke-WingetInstall {
 function Resolve-GhPath {
     Refresh-Path
 
+    $explicitGhPath = $env:GIT_SWEATY_BOOTSTRAP_GH_PATH
+    if (-not [string]::IsNullOrWhiteSpace($explicitGhPath) -and (Test-Path $explicitGhPath)) {
+        return $explicitGhPath
+    }
+
     $commandPath = Resolve-CommandPath @("gh", "gh.exe")
     if ($commandPath) {
         return $commandPath
@@ -209,6 +214,22 @@ function Test-PythonRuntime {
 
 function Resolve-PythonRuntime {
     Refresh-Path
+
+    $explicitPythonPath = $env:GIT_SWEATY_BOOTSTRAP_PYTHON_PATH
+    if (-not [string]::IsNullOrWhiteSpace($explicitPythonPath) -and (Test-PythonRuntime -CommandPath $explicitPythonPath -BaseArgs @())) {
+        return [pscustomobject]@{
+            Command = $explicitPythonPath
+            BaseArgs = @()
+        }
+    }
+
+    $explicitPyLauncherPath = $env:GIT_SWEATY_BOOTSTRAP_PY_LAUNCHER_PATH
+    if (-not [string]::IsNullOrWhiteSpace($explicitPyLauncherPath) -and (Test-PythonRuntime -CommandPath $explicitPyLauncherPath -BaseArgs @("-3"))) {
+        return [pscustomobject]@{
+            Command = $explicitPyLauncherPath
+            BaseArgs = @("-3")
+        }
+    }
 
     foreach ($commandPath in @(
         (Resolve-CommandPath @("py", "py.exe")),

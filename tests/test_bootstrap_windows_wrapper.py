@@ -48,6 +48,9 @@ class BootstrapWindowsWrapperTests(unittest.TestCase):
         wrapper = self._read_wrapper()
 
         self.assertIn("GIT_SWEATY_BOOTSTRAP_ASSUME_YES", wrapper)
+        self.assertIn("GIT_SWEATY_BOOTSTRAP_GH_PATH", wrapper)
+        self.assertIn("GIT_SWEATY_BOOTSTRAP_PYTHON_PATH", wrapper)
+        self.assertIn("GIT_SWEATY_BOOTSTRAP_PY_LAUNCHER_PATH", wrapper)
         self.assertIn('Resolve-CommandPath @("winget", "winget.exe")', wrapper)
         self.assertIn('Resolve-CommandPath @("gh", "gh.exe")', wrapper)
         self.assertIn('Resolve-CommandPath @("py", "py.exe")', wrapper)
