@@ -2545,6 +2545,30 @@ function createTooltipLinkedTypeLine(prefix, label, suffix, href) {
   return segments;
 }
 
+function createTooltipActivityLine(prefix, typeLabel, activityName, href) {
+  const segments = [];
+  const label = String(typeLabel || "").trim();
+  const name = String(activityName || "").trim();
+  if (prefix) segments.push({ text: prefix });
+  if (!name) {
+    if (href) {
+      segments.push({ text: label, href });
+    } else {
+      segments.push({ text: label });
+    }
+    return segments;
+  }
+  if (label) {
+    segments.push({ text: `${label}: ` });
+  }
+  if (href) {
+    segments.push({ text: name, href });
+  } else {
+    segments.push({ text: name });
+  }
+  return segments;
+}
+
 function formatTooltipDuration(seconds) {
   const durationMinutes = Math.round(Number(seconds || 0) / 60);
   if (durationMinutes >= 60) {
@@ -2615,6 +2639,15 @@ function flattenTooltipActivityLinks(activityLinksByType) {
   return links;
 }
 
+function createSingleTooltipActivityLine(typeLabel, activityLinksByType) {
+  const allLinks = flattenTooltipActivityLinks(activityLinksByType);
+  if (allLinks.length !== 1) {
+    return createTooltipTextLine(typeLabel);
+  }
+  const activity = allLinks[0] || {};
+  return createTooltipActivityLine("", typeLabel, activity.name || "", activity.href || "");
+}
+
 function firstTooltipActivityLink(activityLinksByType, preferredType) {
   if (!activityLinksByType || typeof activityLinksByType !== "object") {
     return "";
@@ -2650,12 +2683,34 @@ function formatTypeBreakdownLinesWithLinks(
     const links = Array.isArray(activityLinksByType?.[activityType])
       ? activityLinksByType[activityType]
       : [];
-    const hasSingleLinkedType = count === 1 && links.length === 1 && normalizeTooltipHref(links[0]?.href);
+    const linkedActivities = links
+      .map((entry, index) => {
+        const href = normalizeTooltipHref(entry?.href);
+        if (!href) return null;
+        const rawName = String(entry?.name || "").trim();
+        return {
+          href,
+          name: rawName || `${typeLabel} ${index + 1}`,
+        };
+      })
+      .filter(Boolean);
+    const hasSingleLinkedType = count === 1 && linkedActivities.length === 1;
+    const hasCompleteLinkedActivityList = count > 1 && linkedActivities.length === count;
 
     if (hasSingleLinkedType) {
-      lines.push(createTooltipLinkedTypeLine("", typeLabel, `: ${count}`, links[0].href));
+      const activity = linkedActivities[0];
+      lines.push(createTooltipActivityLine("", typeLabel, activity.name, activity.href));
+    } else if (hasCompleteLinkedActivityList) {
+      linkedActivities.forEach((activity) => {
+        lines.push(createTooltipActivityLine("", typeLabel, activity.name, activity.href));
+      });
     } else {
       lines.push(createTooltipTextLine(`${typeLabel}: ${count}`));
+      if (count > 1 && linkedActivities.length) {
+        linkedActivities.forEach((activity) => {
+          lines.push(createTooltipActivityLine("", typeLabel, activity.name, activity.href));
+        });
+      }
     }
 
     const typeMetrics = typeMetricsByType && typeof typeMetricsByType === "object"
@@ -2663,14 +2718,6 @@ function formatTypeBreakdownLinesWithLinks(
       : null;
     if (typeMetrics && typeof typeMetrics === "object") {
       lines.push(...formatTooltipMetricLines(typeMetrics, units, "- "));
-    }
-
-    if (count > 1 && links.length > 1) {
-      links.forEach((entry, index) => {
-        const fallbackName = `${typeLabel} ${index + 1}`;
-        const name = String(entry?.name || "").trim() || fallbackName;
-        lines.push(createTooltipLinkedTypeLine("    - ", name, "", entry?.href || ""));
-      });
     }
   });
 
@@ -3256,14 +3303,11 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, options
     const singleTypeLabel = type === "all"
       ? getSingleActivityTooltipTypeLabel(typeBreakdown, entry, typeLabels)
       : (Number(entry.count || 0) === 1 ? displayType(type) : "");
-    const singleActivityLink = Number(entry.count || 0) === 1
-      ? firstTooltipActivityLink(activityLinksByType, type)
-      : "";
     const shouldShowPerTypeMetrics = type === "all" && Number(entry.count || 0) > 1;
     let renderedTypeBreakdown = false;
     const lines = [createTooltipTextLine(dateStr)];
     if (singleTypeLabel) {
-      lines.push(createTooltipLinkedTypeLine("", singleTypeLabel, "", singleActivityLink));
+      lines.push(createSingleTooltipActivityLine(singleTypeLabel, activityLinksByType));
     } else {
       lines.push(createTooltipTextLine(formatActivityCountLabel(entry.count, type === "all" ? [] : [type])));
     }
