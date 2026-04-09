@@ -1384,9 +1384,16 @@ function weekIndexFromSundayStart(date, start) {
   return Math.floor((localDayNumber(date) - localDayNumber(start)) / 7);
 }
 
-function weekOfYear(date) {
+function weekStartOnOrBeforeLocal(date, weekStart) {
+  const offset = weekdayRowFromStart(date.getDay(), weekStart);
+  const result = new Date(date.getTime());
+  result.setDate(result.getDate() - offset);
+  return result;
+}
+
+function weekOfYear(date, weekStart = WEEK_START_SUNDAY) {
   const yearStart = new Date(date.getFullYear(), 0, 1);
-  const start = sundayOnOrBefore(yearStart);
+  const start = weekStartOnOrBeforeLocal(yearStart, weekStart);
   return weekIndexFromSundayStart(date, start) + 1;
 }
 
@@ -3832,6 +3839,8 @@ function buildStatsOverview(payload, types, years, color, options = {}) {
   const emptyColor = DEFAULT_COLORS[0];
   const selectedYearSet = new Set(yearsDesc.map(Number));
   const units = normalizeUnits(options.units || payload.units || DEFAULT_UNITS);
+  const weekStart = normalizeWeekStart(options.weekStart);
+  const dayLabels = WEEKDAY_LABELS_BY_WEEK_START[weekStart] || DAYS;
   const onFactStateChange = typeof options.onFactStateChange === "function"
     ? options.onFactStateChange
     : null;
@@ -3875,9 +3884,9 @@ function buildStatsOverview(payload, types, years, color, options = {}) {
         type: activity.type,
         subtype: getActivitySubtypeLabel(activity),
         year,
-        dayIndex: date.getDay(),
+        dayIndex: weekdayRowFromStart(date.getDay(), weekStart),
         monthIndex: date.getMonth(),
-        weekIndex: weekOfYear(date),
+        weekIndex: weekOfYear(date, weekStart),
         hour: hasHour ? hourValue : null,
         active_days: 1,
         distance: perActivityMetricValue("distance"),
@@ -3912,9 +3921,9 @@ function buildStatsOverview(payload, types, years, color, options = {}) {
         type: "",
         subtype: "",
         year,
-        dayIndex: date.getDay(),
+        dayIndex: weekdayRowFromStart(date.getDay(), weekStart),
         monthIndex: date.getMonth(),
-        weekIndex: weekOfYear(date),
+        weekIndex: weekOfYear(date, weekStart),
         hour: null,
         active_days: 0,
         [DAYS_OFF_METRIC_KEY]: 1,
@@ -3924,7 +3933,9 @@ function buildStatsOverview(payload, types, years, color, options = {}) {
 
   const formatBreakdown = (total, breakdown) => formatTooltipBreakdown(total, breakdown, types);
 
-  const dayDisplayLabels = ["Sun", "", "", "Wed", "", "", "Sat"];
+  const dayDisplayLabels = dayLabels.map((label, index) => (
+    index === 0 || index === 3 || index === 6 ? label : ""
+  ));
   const monthDisplayLabels = ["Jan", "", "Mar", "", "May", "", "Jul", "", "Sep", "", "Nov", ""];
 
   const buildZeroedMatrix = (columns) => visibleYearsDesc.map(() => new Array(columns).fill(0));
@@ -4182,7 +4193,7 @@ function buildStatsOverview(payload, types, years, color, options = {}) {
         matrixData.dayMatrix,
         color,
         {
-          tooltipLabels: DAYS,
+          tooltipLabels: dayLabels,
           emptyColor,
           tooltipFormatter: (year, label, value, row, col) => {
             const breakdown = matrixData.dayBreakdowns[row][col] || {};
@@ -4950,6 +4961,7 @@ async function init() {
         if (showMoreStats) {
           const frequencyCard = buildStatsOverview(payload, types, cardYears, frequencyCardColor, {
             units: currentUnits,
+            weekStart: setupWeekStart,
             initialFactKey: selectedFrequencyFactKey,
             initialMetricKey: initialFrequencyMetricKey,
             onFactStateChange: onFrequencyFactStateChange,
@@ -5023,6 +5035,7 @@ async function init() {
           if (showMoreStats) {
             const frequencyCard = buildStatsOverview(payload, [type], cardYears, frequencyCardColor, {
               units: currentUnits,
+              weekStart: setupWeekStart,
               initialFactKey: selectedFrequencyFactKey,
               initialMetricKey: initialFrequencyMetricKey,
               onFactStateChange: onFrequencyFactStateChange,
