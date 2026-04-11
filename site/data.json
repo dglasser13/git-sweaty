@@ -15055,6 +15055,87 @@
       "type": "VirtualRide",
       "url": "https://connect.garmin.com/modern/activity/22394067304",
       "year": 2026
+    },
+    {
+      "date": "2026-04-05",
+      "hour": 7,
+      "name": "Needham Road Cycling",
+      "subtype": "road_biking",
+      "type": "Ride",
+      "url": "https://connect.garmin.com/modern/activity/22415654151",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-05",
+      "hour": 8,
+      "name": "Wells Ave crit",
+      "subtype": "road_biking",
+      "type": "Ride",
+      "url": "https://connect.garmin.com/modern/activity/22416173252",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-05",
+      "hour": 9,
+      "name": "Newton Road Cycling",
+      "subtype": "road_biking",
+      "type": "Ride",
+      "url": "https://connect.garmin.com/modern/activity/22416403477",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-06",
+      "hour": 8,
+      "name": "Indoor Cycling",
+      "subtype": "indoor_cycling",
+      "type": "VirtualRide",
+      "url": "https://connect.garmin.com/modern/activity/22427259052",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-07",
+      "hour": 7,
+      "name": "Indoor Cycling",
+      "subtype": "indoor_cycling",
+      "type": "VirtualRide",
+      "url": "https://connect.garmin.com/modern/activity/22438995044",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-07",
+      "hour": 8,
+      "name": "Indoor Cycling",
+      "subtype": "indoor_cycling",
+      "type": "VirtualRide",
+      "url": "https://connect.garmin.com/modern/activity/22439235936",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-08",
+      "hour": 7,
+      "name": "Indoor Cycling",
+      "subtype": "indoor_cycling",
+      "type": "VirtualRide",
+      "url": "https://connect.garmin.com/modern/activity/22452795063",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-09",
+      "hour": 7,
+      "name": "Indoor Cycling",
+      "subtype": "indoor_cycling",
+      "type": "VirtualRide",
+      "url": "https://connect.garmin.com/modern/activity/22465297116",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-10",
+      "hour": 8,
+      "name": "Indoor Cycling",
+      "subtype": "indoor_cycling",
+      "type": "VirtualRide",
+      "url": "https://connect.garmin.com/modern/activity/22477143837",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -29041,6 +29122,17 @@
           "distance": 33300.28125,
           "elevation_gain": 260.0,
           "moving_time": 3859.9619750976562
+        },
+        "2026-04-05": {
+          "activity_ids": [
+            "22415654151",
+            "22416173252",
+            "22416403477"
+          ],
+          "count": 3,
+          "distance": 32421.14990234375,
+          "elevation_gain": 174.0,
+          "moving_time": 3625.219970703125
         }
       },
       "VirtualRide": {
@@ -29664,6 +29756,52 @@
           "distance": 46743.6015625,
           "elevation_gain": 0.0,
           "moving_time": 5823.8359375
+        },
+        "2026-04-06": {
+          "activity_ids": [
+            "22427259052"
+          ],
+          "count": 1,
+          "distance": 35718.91015625,
+          "elevation_gain": 0.0,
+          "moving_time": 4110.14404296875
+        },
+        "2026-04-07": {
+          "activity_ids": [
+            "22438995044",
+            "22439235936"
+          ],
+          "count": 2,
+          "distance": 32726.9609375,
+          "elevation_gain": 0.0,
+          "moving_time": 3900.6090087890625
+        },
+        "2026-04-08": {
+          "activity_ids": [
+            "22452795063"
+          ],
+          "count": 1,
+          "distance": 40608.0,
+          "elevation_gain": 0.0,
+          "moving_time": 5008.6591796875
+        },
+        "2026-04-09": {
+          "activity_ids": [
+            "22465297116"
+          ],
+          "count": 1,
+          "distance": 37648.26171875,
+          "elevation_gain": 0.0,
+          "moving_time": 4382.0
+        },
+        "2026-04-10": {
+          "activity_ids": [
+            "22477143837"
+          ],
+          "count": 1,
+          "distance": 45175.05078125,
+          "elevation_gain": 0.0,
+          "moving_time": 5422.0
         }
       },
       "resort_skiing": {
@@ -29680,7 +29818,7 @@
     }
   },
   "garmin_profile_url": "https://connect.garmin.com/modern/profile/09fbe1ed-b1d8-4286-8101-18ce193e081f",
-  "generated_at": "2026-04-03T17:01:55.419376+00:00",
+  "generated_at": "2026-04-11T16:02:10.136036+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://connect.garmin.com/modern/profile/09fbe1ed-b1d8-4286-8101-18ce193e081f",
   "repo": "dglasser13/git-sweaty",
