@@ -21867,5 +21867,57 @@
     "start_date_local": "2026-04-10T08:07:07",
     "type": "VirtualRide",
     "year": 2026
+  },
+  {
+    "date": "2026-04-11",
+    "distance": 28059.560546875,
+    "elevation_gain": 0.0,
+    "id": "22492862568",
+    "moving_time": 3973.218994140625,
+    "name": "Indoor Cycling",
+    "raw_activity_type": "indoor_cycling",
+    "raw_type": "indoor_cycling",
+    "start_date_local": "2026-04-11T15:02:35",
+    "type": "VirtualRide",
+    "year": 2026
+  },
+  {
+    "date": "2026-04-12",
+    "distance": 5591.0400390625,
+    "elevation_gain": 24.0,
+    "id": "22499394789",
+    "moving_time": 745.0,
+    "name": "Needham Road Cycling",
+    "raw_activity_type": "road_biking",
+    "raw_type": "road_biking",
+    "start_date_local": "2026-04-12T07:42:24",
+    "type": "Ride",
+    "year": 2026
+  },
+  {
+    "date": "2026-04-12",
+    "distance": 18289.189453125,
+    "elevation_gain": 95.0,
+    "id": "22499990786",
+    "moving_time": 1715.9940185546875,
+    "name": "Wells Ave crit",
+    "raw_activity_type": "road_biking",
+    "raw_type": "road_biking",
+    "start_date_local": "2026-04-12T08:16:05",
+    "type": "Ride",
+    "year": 2026
+  },
+  {
+    "date": "2026-04-12",
+    "distance": 10221.599609375,
+    "elevation_gain": 79.0,
+    "id": "22500474088",
+    "moving_time": 1346.0,
+    "name": "Newton Road Cycling",
+    "raw_activity_type": "road_biking",
+    "raw_type": "road_biking",
+    "start_date_local": "2026-04-12T08:45:34",
+    "type": "Ride",
+    "year": 2026
   }
 ]

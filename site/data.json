@@ -15136,6 +15136,42 @@
       "type": "VirtualRide",
       "url": "https://connect.garmin.com/modern/activity/22477143837",
       "year": 2026
+    },
+    {
+      "date": "2026-04-11",
+      "hour": 15,
+      "name": "Indoor Cycling",
+      "subtype": "indoor_cycling",
+      "type": "VirtualRide",
+      "url": "https://connect.garmin.com/modern/activity/22492862568",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-12",
+      "hour": 7,
+      "name": "Needham Road Cycling",
+      "subtype": "road_biking",
+      "type": "Ride",
+      "url": "https://connect.garmin.com/modern/activity/22499394789",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-12",
+      "hour": 8,
+      "name": "Wells Ave crit",
+      "subtype": "road_biking",
+      "type": "Ride",
+      "url": "https://connect.garmin.com/modern/activity/22499990786",
+      "year": 2026
+    },
+    {
+      "date": "2026-04-12",
+      "hour": 8,
+      "name": "Newton Road Cycling",
+      "subtype": "road_biking",
+      "type": "Ride",
+      "url": "https://connect.garmin.com/modern/activity/22500474088",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -29133,6 +29169,17 @@
           "distance": 32421.14990234375,
           "elevation_gain": 174.0,
           "moving_time": 3625.219970703125
+        },
+        "2026-04-12": {
+          "activity_ids": [
+            "22499394789",
+            "22499990786",
+            "22500474088"
+          ],
+          "count": 3,
+          "distance": 34101.8291015625,
+          "elevation_gain": 198.0,
+          "moving_time": 3806.9940185546875
         }
       },
       "VirtualRide": {
@@ -29802,6 +29849,15 @@
           "distance": 45175.05078125,
           "elevation_gain": 0.0,
           "moving_time": 5422.0
+        },
+        "2026-04-11": {
+          "activity_ids": [
+            "22492862568"
+          ],
+          "count": 1,
+          "distance": 28059.560546875,
+          "elevation_gain": 0.0,
+          "moving_time": 3973.218994140625
         }
       },
       "resort_skiing": {
@@ -29818,7 +29874,7 @@
     }
   },
   "garmin_profile_url": "https://connect.garmin.com/modern/profile/09fbe1ed-b1d8-4286-8101-18ce193e081f",
-  "generated_at": "2026-04-11T16:02:10.136036+00:00",
+  "generated_at": "2026-04-12T17:04:26.058712+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://connect.garmin.com/modern/profile/09fbe1ed-b1d8-4286-8101-18ce193e081f",
   "repo": "dglasser13/git-sweaty",
