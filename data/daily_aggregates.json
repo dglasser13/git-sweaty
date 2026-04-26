@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T15:49:11.048453+00:00",
+  "generated_at": "2026-04-26T15:51:01.249507+00:00",
   "years": {
     "2019": {
       "Hike": {
@@ -14006,6 +14006,17 @@
           "distance": 34101.8291015625,
           "elevation_gain": 198.0,
           "moving_time": 3806.9940185546875
+        },
+        "2026-04-26": {
+          "activity_ids": [
+            "22665341521",
+            "22665797446",
+            "22666362072"
+          ],
+          "count": 3,
+          "distance": 33452.61962890625,
+          "elevation_gain": 197.0,
+          "moving_time": 3872.198974609375
         }
       },
       "VirtualRide": {
@@ -14765,6 +14776,15 @@
           "distance": 50015.16015625,
           "elevation_gain": 0.0,
           "moving_time": 6105.0
+        },
+        "2026-04-25": {
+          "activity_ids": [
+            "22658420821"
+          ],
+          "count": 1,
+          "distance": 32613.119140625,
+          "elevation_gain": 0.0,
+          "moving_time": 3887.0
         }
       },
       "resort_skiing": {
