@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T17:20:55.714584+00:00",
+  "generated_at": "2026-05-14T17:04:45.606163+00:00",
   "years": {
     "2019": {
       "Hike": {
@@ -14920,6 +14920,15 @@
           "distance": 46386.37109375,
           "elevation_gain": 0.0,
           "moving_time": 5736.0
+        },
+        "2026-05-14": {
+          "activity_ids": [
+            "22878407415"
+          ],
+          "count": 1,
+          "distance": 37088.7890625,
+          "elevation_gain": 0.0,
+          "moving_time": 4215.4912109375
         }
       },
       "resort_skiing": {
