@@ -15455,10 +15455,19 @@
     {
       "date": "2026-05-16",
       "hour": 10,
-      "name": "Concord Road Cycling",
+      "name": "Paul Revere's Ride",
       "subtype": "road_biking",
       "type": "Ride",
       "url": "https://connect.garmin.com/modern/activity/22903197185",
+      "year": 2026
+    },
+    {
+      "date": "2026-05-16",
+      "hour": 12,
+      "name": "Concord Road Cycling",
+      "subtype": "road_biking",
+      "type": "Ride",
+      "url": "https://connect.garmin.com/modern/activity/22903487034",
       "year": 2026
     }
   ],
@@ -29483,12 +29492,13 @@
         "2026-05-16": {
           "activity_ids": [
             "22901677856",
-            "22903197185"
+            "22903197185",
+            "22903487034"
           ],
-          "count": 2,
-          "distance": 36289.819580078125,
-          "elevation_gain": 273.0,
-          "moving_time": 6523.0
+          "count": 3,
+          "distance": 37260.93957519531,
+          "elevation_gain": 282.0,
+          "moving_time": 6740.0
         }
       },
       "VirtualRide": {
@@ -30426,7 +30436,7 @@
     }
   },
   "garmin_profile_url": "https://connect.garmin.com/modern/profile/09fbe1ed-b1d8-4286-8101-18ce193e081f",
-  "generated_at": "2026-05-16T16:02:29.535576+00:00",
+  "generated_at": "2026-05-17T16:03:03.698270+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://connect.garmin.com/modern/profile/09fbe1ed-b1d8-4286-8101-18ce193e081f",
   "repo": "dglasser13/git-sweaty",

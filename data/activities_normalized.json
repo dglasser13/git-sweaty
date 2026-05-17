@@ -22329,10 +22329,23 @@
     "elevation_gain": 262.0,
     "id": "22903197185",
     "moving_time": 5978.0,
-    "name": "Concord Road Cycling",
+    "name": "Paul Revere's Ride",
     "raw_activity_type": "road_biking",
     "raw_type": "road_biking",
     "start_date_local": "2026-05-16T10:06:15",
+    "type": "Ride",
+    "year": 2026
+  },
+  {
+    "date": "2026-05-16",
+    "distance": 971.1199951171875,
+    "elevation_gain": 9.0,
+    "id": "22903487034",
+    "moving_time": 217.0,
+    "name": "Concord Road Cycling",
+    "raw_activity_type": "road_biking",
+    "raw_type": "road_biking",
+    "start_date_local": "2026-05-16T12:12:19",
     "type": "Ride",
     "year": 2026
   }
