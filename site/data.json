@@ -15595,6 +15595,15 @@
       "type": "VirtualRide",
       "url": "https://connect.garmin.com/modern/activity/23129822722",
       "year": 2026
+    },
+    {
+      "date": "2026-06-05",
+      "hour": 7,
+      "name": "Indoor Cycling",
+      "subtype": "indoor_cycling",
+      "type": "VirtualRide",
+      "url": "https://connect.garmin.com/modern/activity/23139814739",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -30672,6 +30681,15 @@
           "distance": 14093.8603515625,
           "elevation_gain": 0.0,
           "moving_time": 1929.0
+        },
+        "2026-06-05": {
+          "activity_ids": [
+            "23139814739"
+          ],
+          "count": 1,
+          "distance": 48353.0,
+          "elevation_gain": 0.0,
+          "moving_time": 5936.0
         }
       },
       "resort_skiing": {
@@ -30688,7 +30706,7 @@
     }
   },
   "garmin_profile_url": "https://connect.garmin.com/modern/profile/09fbe1ed-b1d8-4286-8101-18ce193e081f",
-  "generated_at": "2026-06-04T17:47:49.475533+00:00",
+  "generated_at": "2026-06-05T17:22:10.325611+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://connect.garmin.com/modern/profile/09fbe1ed-b1d8-4286-8101-18ce193e081f",
   "repo": "dglasser13/git-sweaty",
