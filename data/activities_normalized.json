@@ -22543,5 +22543,31 @@
     "start_date_local": "2026-06-05T07:58:31",
     "type": "VirtualRide",
     "year": 2026
+  },
+  {
+    "date": "2026-06-07",
+    "distance": 32594.0703125,
+    "elevation_gain": 0.0,
+    "id": "23168258599",
+    "moving_time": 3618.0,
+    "name": "Indoor Cycling",
+    "raw_activity_type": "indoor_cycling",
+    "raw_type": "indoor_cycling",
+    "start_date_local": "2026-06-07T14:20:52",
+    "type": "VirtualRide",
+    "year": 2026
+  },
+  {
+    "date": "2026-06-08",
+    "distance": 36200.671875,
+    "elevation_gain": 0.0,
+    "id": "23174842646",
+    "moving_time": 4508.712890625,
+    "name": "Indoor Cycling",
+    "raw_activity_type": "indoor_cycling",
+    "raw_type": "indoor_cycling",
+    "start_date_local": "2026-06-08T07:53:28",
+    "type": "VirtualRide",
+    "year": 2026
   }
 ]
