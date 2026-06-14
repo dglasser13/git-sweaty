@@ -22608,5 +22608,44 @@
     "start_date_local": "2026-06-12T08:54:40",
     "type": "VirtualRide",
     "year": 2026
+  },
+  {
+    "date": "2026-06-13",
+    "distance": 10214.4599609375,
+    "elevation_gain": 76.0,
+    "id": "23237806811",
+    "moving_time": 1398.0,
+    "name": "Needham Road Cycling",
+    "raw_activity_type": "road_biking",
+    "raw_type": "road_biking",
+    "start_date_local": "2026-06-13T13:28:44",
+    "type": "Ride",
+    "year": 2026
+  },
+  {
+    "date": "2026-06-14",
+    "distance": 4564.5400390625,
+    "elevation_gain": 53.0,
+    "id": "23245486709",
+    "moving_time": 948.0,
+    "name": "Harvard Road Cycling",
+    "raw_activity_type": "road_biking",
+    "raw_type": "road_biking",
+    "start_date_local": "2026-06-14T07:23:02",
+    "type": "Ride",
+    "year": 2026
+  },
+  {
+    "date": "2026-06-14",
+    "distance": 65727.390625,
+    "elevation_gain": 811.0,
+    "id": "23247178552",
+    "moving_time": 7433.927062988281,
+    "name": "Ken Harrod Memorial Road Race",
+    "raw_activity_type": "road_biking",
+    "raw_type": "road_biking",
+    "start_date_local": "2026-06-14T07:56:53",
+    "type": "Ride",
+    "year": 2026
   }
 ]
