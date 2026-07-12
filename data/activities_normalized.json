@@ -22842,5 +22842,18 @@
     "start_date_local": "2026-07-10T08:00:40",
     "type": "VirtualRide",
     "year": 2026
+  },
+  {
+    "date": "2026-07-12",
+    "distance": 54266.578125,
+    "elevation_gain": 431.0,
+    "id": "23572369931",
+    "moving_time": 7022.0,
+    "name": "Needham Road Cycling",
+    "raw_activity_type": "road_biking",
+    "raw_type": "road_biking",
+    "start_date_local": "2026-07-12T09:37:16",
+    "type": "Ride",
+    "year": 2026
   }
 ]
