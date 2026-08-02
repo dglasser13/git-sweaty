@@ -15937,6 +15937,24 @@
       "type": "VirtualRide",
       "url": "https://connect.garmin.com/modern/activity/23800534610",
       "year": 2026
+    },
+    {
+      "date": "2026-08-01",
+      "hour": 7,
+      "name": "BMTR metric century meetup in Barre, MA",
+      "subtype": "road_biking",
+      "type": "Ride",
+      "url": "https://connect.garmin.com/modern/activity/23814652300",
+      "year": 2026
+    },
+    {
+      "date": "2026-08-02",
+      "hour": 10,
+      "name": "Rockport Hiking",
+      "subtype": "hiking",
+      "type": "Hike",
+      "url": "https://connect.garmin.com/modern/activity/23825678167",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -29914,6 +29932,17 @@
       }
     },
     "2026": {
+      "Hike": {
+        "2026-08-02": {
+          "activity_ids": [
+            "23825678167"
+          ],
+          "count": 1,
+          "distance": 2142.06005859375,
+          "elevation_gain": 40.0,
+          "moving_time": 1692.0
+        }
+      },
       "Ride": {
         "2026-03-29": {
           "activity_ids": [
@@ -29995,6 +30024,15 @@
           "distance": 54266.578125,
           "elevation_gain": 431.0,
           "moving_time": 7022.0
+        },
+        "2026-08-01": {
+          "activity_ids": [
+            "23814652300"
+          ],
+          "count": 1,
+          "distance": 103057.3515625,
+          "elevation_gain": 1417.0,
+          "moving_time": 13141.370971679688
         }
       },
       "VirtualRide": {
@@ -31364,7 +31402,7 @@
     }
   },
   "garmin_profile_url": "https://connect.garmin.com/modern/profile/09fbe1ed-b1d8-4286-8101-18ce193e081f",
-  "generated_at": "2026-08-01T16:05:39.005325+00:00",
+  "generated_at": "2026-08-02T16:06:05.205842+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://connect.garmin.com/modern/profile/09fbe1ed-b1d8-4286-8101-18ce193e081f",
   "repo": "dglasser13/git-sweaty",
