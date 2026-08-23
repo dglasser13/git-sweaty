@@ -23219,5 +23219,18 @@
     "start_date_local": "2026-08-20T07:58:32",
     "type": "VirtualRide",
     "year": 2026
+  },
+  {
+    "date": "2026-08-22",
+    "distance": 6398.16015625,
+    "elevation_gain": 209.0,
+    "id": "24075352778",
+    "moving_time": 5832.0,
+    "name": "Waterville Valley Hiking",
+    "raw_activity_type": "hiking",
+    "raw_type": "hiking",
+    "start_date_local": "2026-08-22T10:09:18",
+    "type": "Hike",
+    "year": 2026
   }
 ]
