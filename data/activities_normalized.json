@@ -23284,5 +23284,18 @@
     "start_date_local": "2026-08-28T07:59:45",
     "type": "VirtualRide",
     "year": 2026
+  },
+  {
+    "date": "2026-08-30",
+    "distance": 2596.669921875,
+    "elevation_gain": 9.0,
+    "id": "24173620763",
+    "moving_time": 1860.0,
+    "name": "Needham Hiking",
+    "raw_activity_type": "hiking",
+    "raw_type": "hiking",
+    "start_date_local": "2026-08-30T10:08:30",
+    "type": "Hike",
+    "year": 2026
   }
 ]

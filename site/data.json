@@ -16117,6 +16117,15 @@
       "type": "VirtualRide",
       "url": "https://connect.garmin.com/modern/activity/24148224646",
       "year": 2026
+    },
+    {
+      "date": "2026-08-30",
+      "hour": 10,
+      "name": "Needham Hiking",
+      "subtype": "hiking",
+      "type": "Hike",
+      "url": "https://connect.garmin.com/modern/activity/24173620763",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -30112,6 +30121,15 @@
           "distance": 6398.16015625,
           "elevation_gain": 209.0,
           "moving_time": 5832.0
+        },
+        "2026-08-30": {
+          "activity_ids": [
+            "24173620763"
+          ],
+          "count": 1,
+          "distance": 2596.669921875,
+          "elevation_gain": 9.0,
+          "moving_time": 1860.0
         }
       },
       "Ride": {
@@ -31726,7 +31744,7 @@
     }
   },
   "garmin_profile_url": "https://connect.garmin.com/modern/profile/09fbe1ed-b1d8-4286-8101-18ce193e081f",
-  "generated_at": "2026-08-29T18:17:14.418823+00:00",
+  "generated_at": "2026-08-30T18:32:15.697606+00:00",
   "other_bucket": "OtherSports",
   "profile_url": "https://connect.garmin.com/modern/profile/09fbe1ed-b1d8-4286-8101-18ce193e081f",
   "repo": "dglasser13/git-sweaty",
